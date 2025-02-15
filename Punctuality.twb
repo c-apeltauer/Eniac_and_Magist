@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Punctuality' inline='true' name='federated.11eif0p0g8jod616q981i0mxl86d' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Punctuality' name='textscan.1x1nzl01290eeu1chlq1a01huusu'>
+            <connection class='textscan' directory='C:/Users/Esprimo/Bootcamp/Chapter_1_Eniac_and_Magist/Tableau' filename='Punctuality.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1x1nzl01290eeu1chlq1a01huusu' name='Punctuality.csv' table='[Punctuality#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+            <column datatype='string' name='Punctuality' ordinal='0' />
+            <column datatype='integer' name='techProducts' ordinal='1' />
+            <column datatype='integer' name='highEndTechProducts' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Punctuality.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Punctuality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Punctuality]</local-name>
+            <parent-name>[Punctuality.csv]</parent-name>
+            <remote-alias>Punctuality</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>techProducts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[techProducts]</local-name>
+            <parent-name>[Punctuality.csv]</parent-name>
+            <remote-alias>techProducts</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>highEndTechProducts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[highEndTechProducts]</local-name>
+            <parent-name>[Punctuality.csv]</parent-name>
+            <remote-alias>highEndTechProducts</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' default-format='p0.00%' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([techProducts]) / TOTAL(SUM([techProducts]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='real' default-format='p0.00%' name='[Calculation2]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([techProducts]) / TOTAL(SUM([techProducts]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='real' default-format='p0.00%' name='[Calculation3]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([highEndTechProducts]) / TOTAL(SUM([highEndTechProducts]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Dummy' datatype='integer' name='[Calculation_632755794063032320]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MIN(1)' />
+      </column>
+      <column datatype='string' name='[Punctuality]' role='dimension' type='nominal' />
+      <column caption='Punctuality.csv' datatype='table' name='[__tableau_internal_object_id__].[Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98]' role='measure' type='quantitative' />
+      <column caption='High End Tech Products' datatype='integer' name='[highEndTechProducts]' role='measure' type='quantitative' />
+      <column caption='Tech Products' datatype='integer' name='[techProducts]' role='measure' type='quantitative' />
+      <column-instance column='[Punctuality]' derivation='None' name='[none:Punctuality:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Esprimo/AppData/Local/Temp/TableauTemp/#TableauTemp_1pr3zdg1ajxjeq166kntk0m5ejlz.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/12/2025 06:29:18 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Punctuality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Punctuality]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Punctuality</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Punctuality.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>techProducts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[techProducts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>techProducts</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Punctuality.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>highEndTechProducts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[highEndTechProducts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>highEndTechProducts</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Punctuality.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Punctuality:nk]' type='palette'>
+            <map to='#bab0ac'>
+              <bucket>&quot;OnTime&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delayed&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Punctuality.csv' id='Punctuality.csv_7FC3BEA317F6487BA89F86233577DF98'>
+            <properties context=''>
+              <relation connection='textscan.1x1nzl01290eeu1chlq1a01huusu' name='Punctuality.csv' table='[Punctuality#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+                  <column datatype='string' name='Punctuality' ordinal='0' />
+                  <column datatype='integer' name='techProducts' ordinal='1' />
+                  <column datatype='integer' name='highEndTechProducts' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='High-end tech products'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Punctuality of High-End Tech Deliveries</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Punctuality' name='federated.11eif0p0g8jod616q981i0mxl86d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11eif0p0g8jod616q981i0mxl86d'>
+            <column caption='Dummy' datatype='integer' name='[Calculation_632755794063032320]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN(1)' />
+            </column>
+            <column datatype='string' name='[Punctuality]' role='dimension' type='nominal' />
+            <column caption='High End Tech Products' datatype='integer' name='[highEndTechProducts]' role='measure' type='quantitative' />
+            <column-instance column='[Punctuality]' derivation='None' name='[none:Punctuality:nk]' pivot='key' type='nominal' />
+            <column-instance column='[highEndTechProducts]' derivation='Sum' name='[pcto:sum:highEndTechProducts:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[highEndTechProducts]' derivation='Sum' name='[sum:highEndTechProducts:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_632755794063032320]' derivation='User' name='[usr:Calculation_632755794063032320:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;OnTime&quot;</bucket>
+              <bucket>&quot;Delayed&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='width' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' value='10' />
+            <format attr='display' class='1' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='840' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' field='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' value='9' />
+            <format attr='font-size' data-class='total' field='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' value='9' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' value='9' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' />
+              <wedge-size column='[federated.11eif0p0g8jod616q981i0mxl86d].[sum:highEndTechProducts:qk]' />
+              <text column='[federated.11eif0p0g8jod616q981i0mxl86d].[pcto:sum:highEndTechProducts:qk]' />
+              <text column='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.087458610534668' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk] + [federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{AAE7D032-76C6-46E8-A269-45B46BBD830F}' />
+    </worksheet>
+    <worksheet name='Tech Products'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Punctuality of Tech Deliveries</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Punctuality' name='federated.11eif0p0g8jod616q981i0mxl86d' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11eif0p0g8jod616q981i0mxl86d'>
+            <column caption='Dummy' datatype='integer' name='[Calculation_632755794063032320]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN(1)' />
+            </column>
+            <column datatype='string' name='[Punctuality]' role='dimension' type='nominal' />
+            <column-instance column='[Punctuality]' derivation='None' name='[none:Punctuality:nk]' pivot='key' type='nominal' />
+            <column-instance column='[techProducts]' derivation='Sum' name='[pcto:sum:techProducts:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Tech Products' datatype='integer' name='[techProducts]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_632755794063032320]' derivation='User' name='[usr:Calculation_632755794063032320:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;OnTime&quot;</bucket>
+              <bucket>&quot;Delayed&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='width' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' value='10' />
+            <format attr='display' class='1' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='887' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' />
+              <wedge-size column='[federated.11eif0p0g8jod616q981i0mxl86d].[pcto:sum:techProducts:qk]' />
+              <text column='[federated.11eif0p0g8jod616q981i0mxl86d].[pcto:sum:techProducts:qk]' />
+              <text column='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#b4b4b4' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk] + [federated.11eif0p0g8jod616q981i0mxl86d].[usr:Calculation_632755794063032320:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{A287D531-E2CB-4812-A2EA-F037CFCE145C}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Tech Products'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.11eif0p0g8jod616q981i0mxl86d].[:Measure Names]</field>
+            <field>[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{73138054-EB6E-41D7-B822-B954B79F86A3}' />
+    </window>
+    <window class='worksheet' maximized='true' name='High-end tech products'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.11eif0p0g8jod616q981i0mxl86d].[none:Punctuality:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BED9E090-2739-4B25-9CE5-CD1B6455B75F}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='High-end tech products' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Tech Products' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

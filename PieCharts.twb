@@ -1,0 +1,1272 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='PieCharts2' inline='true' name='federated.16ptjkv06weh6l1dhdr170jzw2a4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='PieCharts2' name='textscan.0jf5wzr123s4is10j8ja114qnq9q'>
+            <connection class='textscan' directory='C:/Users/Esprimo/Bootcamp/Chapter_1_Eniac_and_Magist/Tableau' filename='PieCharts2.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='PieCharts1' name='textscan.0dh3ejj1x8balx14t45y91b9gwc3'>
+            <connection class='textscan' directory='C:/Users/Esprimo/Bootcamp/Chapter_1_Eniac_and_Magist/Tableau' filename='PieCharts1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0jf5wzr123s4is10j8ja114qnq9q' name='PieCharts2.csv' table='[PieCharts2#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+              <column datatype='string' name='Category' ordinal='0' />
+              <column datatype='integer' name='Numbers' ordinal='1' />
+              <column datatype='real' name='Revenue' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0dh3ejj1x8balx14t45y91b9gwc3' name='PieCharts1.csv' table='[PieCharts1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+              <column datatype='string' name='Category' ordinal='0' />
+              <column datatype='integer' name='Numbers' ordinal='1' />
+              <column datatype='real' name='Revenue' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Category (PieCharts1.csv)]' value='[PieCharts1.csv].[Category]' />
+          <map key='[Category]' value='[PieCharts2.csv].[Category]' />
+          <map key='[Numbers (PieCharts1.csv)]' value='[PieCharts1.csv].[Numbers]' />
+          <map key='[Numbers]' value='[PieCharts2.csv].[Numbers]' />
+          <map key='[Revenue (PieCharts1.csv)]' value='[PieCharts1.csv].[Revenue]' />
+          <map key='[Revenue]' value='[PieCharts2.csv].[Revenue]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[PieCharts2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[PieCharts1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[PieCharts2.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Numbers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Numbers]</local-name>
+            <parent-name>[PieCharts2.csv]</parent-name>
+            <remote-alias>Numbers</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Revenue]</local-name>
+            <parent-name>[PieCharts2.csv]</parent-name>
+            <remote-alias>Revenue</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category (PieCharts1.csv)]</local-name>
+            <parent-name>[PieCharts1.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Numbers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Numbers (PieCharts1.csv)]</local-name>
+            <parent-name>[PieCharts1.csv]</parent-name>
+            <remote-alias>Numbers</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Revenue (PieCharts1.csv)]</local-name>
+            <parent-name>[PieCharts1.csv]</parent-name>
+            <remote-alias>Revenue</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Dummy Axis' datatype='integer' name='[Calculation_188306805412306944]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MIN(1)' />
+      </column>
+      <column caption='Top Label2 for Category' datatype='string' name='[Calculation_188306805438709762 1]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers (PieCharts1.csv)])) = 2 THEN ATTR([Category (PieCharts1.csv)]) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Top Label for Category' datatype='string' name='[Calculation_188306805438709762]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers])) = 3 THEN ATTR([Category]) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Top Label2 fo Percent of Total' datatype='real' default-format='p0.00%' name='[Calculation_188306805439197187 1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers (PieCharts1.csv)])) = 2 THEN SUM([Numbers (PieCharts1.csv)])/TOTAL(SUM([Numbers (PieCharts1.csv)])) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Top Label fo Percent of Total' datatype='real' default-format='p0.00%' name='[Calculation_188306805439197187]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers])) = 3 THEN SUM([Numbers])/TOTAL(SUM([Numbers])) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Category (PieCharts1.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+      <column caption='Top Label3 fo Percent of Total (copy)' datatype='real' default-format='p0.00%' name='[Top Label fo Percent of Total (copy)_1049901709393633280]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Revenue])) = 3 THEN SUM([Revenue])/TOTAL(SUM([Revenue])) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Top Label4 fo Percent of Total' datatype='real' default-format='p0.00%' name='[Top Label2 fo Percent of Total (copy)_1049901709394001921]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Revenue (PieCharts1.csv)])) = 2 THEN SUM([Revenue (PieCharts1.csv)])/TOTAL(SUM([Revenue (PieCharts1.csv)])) END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='PieCharts1.csv' datatype='table' name='[__tableau_internal_object_id__].[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]' role='measure' type='quantitative' />
+      <column caption='PieCharts2.csv' datatype='table' name='[__tableau_internal_object_id__].[PieCharts2.csv_C674685C54A749C3B791F7341690D358]' role='measure' type='quantitative' />
+      <column-instance column='[Category (PieCharts1.csv)]' derivation='None' name='[none:Category (PieCharts1.csv):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+      <group caption='All Tech' name='[Category Set]' name-style='unqualified' user:ui-builder='lasso-group'>
+        <groupfilter function='union'>
+          <groupfilter function='member' level='[Category]' member='&quot;High-end tech products&quot;' />
+          <groupfilter function='member' level='[Category]' member='&quot;Tech products&quot;' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Esprimo/AppData/Local/Temp/TableauTemp/#TableauTemp_1tcx7df0h6nbig1d6lvfa19psyty.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/12/2025 06:24:50 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='PieCharts2.csv_C674685C54A749C3B791F7341690D358' table='[Extract].[PieCharts2.csv_C674685C54A749C3B791F7341690D358]' type='table' />
+            <relation name='PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71' table='[Extract].[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Category (PieCharts1.csv)]' value='[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71].[Category]' />
+            <map key='[Category]' value='[PieCharts2.csv_C674685C54A749C3B791F7341690D358].[Category]' />
+            <map key='[Numbers (PieCharts1.csv)]' value='[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71].[Numbers]' />
+            <map key='[Numbers]' value='[PieCharts2.csv_C674685C54A749C3B791F7341690D358].[Numbers]' />
+            <map key='[Revenue (PieCharts1.csv)]' value='[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71].[Revenue]' />
+            <map key='[Revenue]' value='[PieCharts2.csv_C674685C54A749C3B791F7341690D358].[Revenue]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>0</ordinal>
+              <family>PieCharts2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Numbers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Numbers]</local-name>
+              <parent-name>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</parent-name>
+              <remote-alias>Numbers</remote-alias>
+              <ordinal>1</ordinal>
+              <family>PieCharts2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Revenue]</local-name>
+              <parent-name>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</parent-name>
+              <remote-alias>Revenue</remote-alias>
+              <ordinal>2</ordinal>
+              <family>PieCharts2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PieCharts2.csv_C674685C54A749C3B791F7341690D358]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category (PieCharts1.csv)]</local-name>
+              <parent-name>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>3</ordinal>
+              <family>PieCharts1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+              <object-id>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Numbers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Numbers (PieCharts1.csv)]</local-name>
+              <parent-name>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</parent-name>
+              <remote-alias>Numbers</remote-alias>
+              <ordinal>4</ordinal>
+              <family>PieCharts1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Revenue (PieCharts1.csv)]</local-name>
+              <parent-name>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</parent-name>
+              <remote-alias>Revenue</remote-alias>
+              <ordinal>5</ordinal>
+              <family>PieCharts1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Category (PieCharts1.csv):nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Products&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tech products&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Category:nk]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Products&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tech products&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;High-end tech products&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='PieCharts1.csv' id='PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71'>
+            <properties context=''>
+              <relation connection='textscan.0dh3ejj1x8balx14t45y91b9gwc3' name='PieCharts1.csv' table='[PieCharts1#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+                  <column datatype='string' name='Category' ordinal='0' />
+                  <column datatype='integer' name='Numbers' ordinal='1' />
+                  <column datatype='real' name='Revenue' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71' table='[Extract].[PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71]' type='table' />
+            </properties>
+          </object>
+          <object caption='PieCharts2.csv' id='PieCharts2.csv_C674685C54A749C3B791F7341690D358'>
+            <properties context=''>
+              <relation connection='textscan.0jf5wzr123s4is10j8ja114qnq9q' name='PieCharts2.csv' table='[PieCharts2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+                  <column datatype='string' name='Category' ordinal='0' />
+                  <column datatype='integer' name='Numbers' ordinal='1' />
+                  <column datatype='real' name='Revenue' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='PieCharts2.csv_C674685C54A749C3B791F7341690D358' table='[Extract].[PieCharts2.csv_C674685C54A749C3B791F7341690D358]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Revenue]' />
+              <expression op='[Revenue (PieCharts1.csv)]' />
+            </expression>
+            <first-end-point object-id='PieCharts2.csv_C674685C54A749C3B791F7341690D358' />
+            <second-end-point object-id='PieCharts1.csv_C97C1AC568814D3EB8AC22CCC8EF1A71' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Revenue'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Contribution of Tech Products on Profit</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='PieCharts2' name='federated.16ptjkv06weh6l1dhdr170jzw2a4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16ptjkv06weh6l1dhdr170jzw2a4'>
+            <column caption='Dummy Axis' datatype='integer' name='[Calculation_188306805412306944]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN(1)' />
+            </column>
+            <column caption='Top Label2 for Category' datatype='string' name='[Calculation_188306805438709762 1]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers (PieCharts1.csv)])) = 2 THEN ATTR([Category (PieCharts1.csv)]) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Top Label for Category' datatype='string' name='[Calculation_188306805438709762]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers])) = 3 THEN ATTR([Category]) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Top Label2 fo Percent of Total' datatype='real' default-format='p0.00%' name='[Calculation_188306805439197187 1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers (PieCharts1.csv)])) = 2 THEN SUM([Numbers (PieCharts1.csv)])/TOTAL(SUM([Numbers (PieCharts1.csv)])) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Category (PieCharts1.csv)]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Numbers (PieCharts1.csv)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Numbers]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Revenue (PieCharts1.csv)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Revenue]' role='measure' type='quantitative' />
+            <column caption='Top Label3 fo Percent of Total (copy)' datatype='real' default-format='p0.00%' name='[Top Label fo Percent of Total (copy)_1049901709393633280]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Revenue])) = 3 THEN SUM([Revenue])/TOTAL(SUM([Revenue])) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Top Label4 fo Percent of Total' datatype='real' default-format='p0.00%' name='[Top Label2 fo Percent of Total (copy)_1049901709394001921]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Revenue (PieCharts1.csv)])) = 2 THEN SUM([Revenue (PieCharts1.csv)])/TOTAL(SUM([Revenue (PieCharts1.csv)])) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Category (PieCharts1.csv)]' derivation='None' name='[none:Category (PieCharts1.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Numbers (PieCharts1.csv)]' derivation='Sum' name='[sum:Numbers (PieCharts1.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Revenue (PieCharts1.csv)]' derivation='Sum' name='[sum:Revenue (PieCharts1.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Revenue]' derivation='Sum' name='[sum:Revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_188306805412306944]' derivation='User' name='[usr:Calculation_188306805412306944:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_188306805438709762 1]' derivation='User' name='[usr:Calculation_188306805438709762 1:nk:2]' pivot='key' type='nominal'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (PieCharts1.csv)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_188306805438709762]' derivation='User' name='[usr:Calculation_188306805438709762:nk:2]' pivot='key' type='nominal'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_188306805438709762]' derivation='User' name='[usr:Calculation_188306805438709762:nk]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_188306805439197187 1]' derivation='User' name='[usr:Calculation_188306805439197187 1:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (PieCharts1.csv)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Top Label fo Percent of Total (copy)_1049901709393633280]' derivation='User' name='[usr:Top Label fo Percent of Total (copy)_1049901709393633280:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Top Label2 fo Percent of Total (copy)_1049901709394001921]' derivation='User' name='[usr:Top Label2 fo Percent of Total (copy)_1049901709394001921:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (PieCharts1.csv)]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <manual-sort column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>%null%</bucket>
+              <bucket>&quot;Products&quot;</bucket>
+              <bucket>&quot;Tech products&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Products&quot;</bucket>
+              <bucket>&quot;High-end tech products&quot;</bucket>
+              <bucket>&quot;Tech products&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' field-type='quantitative' fold='true' max='2' min='0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' field-type='quantitative' max='2' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='1' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' value='18' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#f5eddc' />
+            <format attr='background-color' data-class='total' value='#f9e9e0' />
+            <format attr='band-color' scope='rows' value='#eff3e3' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='1' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='15' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='17' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5052486658096313' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='18' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]' />
+              <wedge-size column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[sum:Revenue:qk]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk:2]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Top Label fo Percent of Total (copy)_1049901709393633280:qk:2]' />
+              <lod column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#f28e2b' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='6.5326151847839355' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='19' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]' />
+              <wedge-size column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[sum:Revenue (PieCharts1.csv):qk]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762 1:nk:2]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Top Label2 fo Percent of Total (copy)_1049901709394001921:qk:2]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+                <format attr='text-orientation' value='0' />
+                <format attr='wrap' value='auto' />
+                <format attr='vertical-align' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#e15759' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='4.4617786407470703' />
+                <format attr='mark-labels-range-scope' value='table' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk] + [federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk])</rows>
+        <cols />
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor y-index='1'>
+                  <x-fields y-index='1' />
+                  <y-fields y-index='1'>
+                    <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[sum:Numbers (PieCharts1.csv):qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762 1:nk:2]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805439197187 1:qk:2]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Tech products&quot;</value>
+                <value>3698</value>
+                <value>1</value>
+                <value>&quot;Tech products&quot;</value>
+                <value>0.11219660194174758</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-130' y='97' />
+          </mark-label>
+          <mark-label id='1'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields>
+                    <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[sum:Revenue:qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk:2]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Top Label fo Percent of Total (copy)_1049901709393633280:qk:2]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;High-end tech products&quot;</value>
+                <value>679249.34999999998</value>
+                <value>1</value>
+                <value>&quot;High-end tech products&quot;</value>
+                <value>0.049975511791851925</value>
+                <value>%null%</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-145' y='-15' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{5B7CD729-AE41-42BC-8B86-3560AAD3DB8B}' />
+    </worksheet>
+    <worksheet name='Soldes'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Products Sold</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='PieCharts2' name='federated.16ptjkv06weh6l1dhdr170jzw2a4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.16ptjkv06weh6l1dhdr170jzw2a4'>
+            <column caption='Dummy Axis' datatype='integer' name='[Calculation_188306805412306944]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN(1)' />
+            </column>
+            <column caption='Top Label2 for Category' datatype='string' name='[Calculation_188306805438709762 1]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers (PieCharts1.csv)])) = 2 THEN ATTR([Category (PieCharts1.csv)]) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Top Label for Category' datatype='string' name='[Calculation_188306805438709762]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers])) = 3 THEN ATTR([Category]) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Top Label2 fo Percent of Total' datatype='real' default-format='p0.00%' name='[Calculation_188306805439197187 1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers (PieCharts1.csv)])) = 2 THEN SUM([Numbers (PieCharts1.csv)])/TOTAL(SUM([Numbers (PieCharts1.csv)])) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Top Label fo Percent of Total' datatype='real' default-format='p0.00%' name='[Calculation_188306805439197187]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(SUM([Numbers])) = 3 THEN SUM([Numbers])/TOTAL(SUM([Numbers])) END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Category (PieCharts1.csv)]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Numbers (PieCharts1.csv)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Numbers]' role='measure' type='quantitative' />
+            <column-instance column='[Category (PieCharts1.csv)]' derivation='None' name='[none:Category (PieCharts1.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Numbers]' derivation='Sum' name='[pcto:sum:Numbers:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Numbers (PieCharts1.csv)]' derivation='Sum' name='[sum:Numbers (PieCharts1.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_188306805412306944]' derivation='User' name='[usr:Calculation_188306805412306944:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_188306805438709762 1]' derivation='User' name='[usr:Calculation_188306805438709762 1:nk:2]' pivot='key' type='nominal'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (PieCharts1.csv)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_188306805438709762]' derivation='User' name='[usr:Calculation_188306805438709762:nk:2]' pivot='key' type='nominal'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_188306805438709762]' derivation='User' name='[usr:Calculation_188306805438709762:nk]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column-instance column='[Calculation_188306805439197187 1]' derivation='User' name='[usr:Calculation_188306805439197187 1:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (PieCharts1.csv)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_188306805439197187]' derivation='User' name='[usr:Calculation_188306805439197187:qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <manual-sort column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>%null%</bucket>
+              <bucket>&quot;Products&quot;</bucket>
+              <bucket>&quot;Tech products&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Products&quot;</bucket>
+              <bucket>&quot;High-end tech products&quot;</bucket>
+              <bucket>&quot;Tech products&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' field-type='quantitative' fold='true' max='2' min='0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' field-type='quantitative' max='2' min='0' range-type='fixed' scope='rows' type='space' />
+            <format attr='display' class='1' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' value='18' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='9' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[pcto:sum:Numbers:qk]' field-type='quantitative' max-size='1' min-size='0' type='quantsize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#f5eddc' />
+            <format attr='background-color' data-class='total' value='#f9e9e0' />
+            <format attr='band-color' scope='rows' value='#eff3e3' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='1' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='17' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5052486658096313' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='18' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]' />
+              <wedge-size column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[pcto:sum:Numbers:qk]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk:2]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805439197187:qk:3]' />
+              <lod column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#f28e2b' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='6.5326151847839355' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='19' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]' />
+              <wedge-size column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[sum:Numbers (PieCharts1.csv):qk]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762 1:nk:2]' />
+              <text column='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805439197187 1:qk:2]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+                <format attr='text-orientation' value='0' />
+                <format attr='wrap' value='auto' />
+                <format attr='vertical-align' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#e15759' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='4.9290008544921875' />
+                <format attr='mark-labels-range-scope' value='table' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk] + [federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk])</rows>
+        <cols />
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor y-index='1'>
+                  <x-fields y-index='1' />
+                  <y-fields y-index='1'>
+                    <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[sum:Numbers (PieCharts1.csv):qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762 1:nk:2]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805439197187 1:qk:2]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Tech products&quot;</value>
+                <value>3698</value>
+                <value>1</value>
+                <value>&quot;Tech products&quot;</value>
+                <value>0.11219660194174758</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-94' y='72' />
+          </mark-label>
+          <mark-label id='1'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields>
+                    <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805412306944:qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[pcto:sum:Numbers:qk]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk:2]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805439197187:qk:3]</field>
+                  <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;High-end tech products&quot;</value>
+                <value>1</value>
+                <value>0.011046705714545841</value>
+                <value>&quot;High-end tech products&quot;</value>
+                <value>0.011046705714545841</value>
+                <value>%null%</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-138' y='-10' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{0083E4A6-17A8-4506-874E-CD003E0616A6}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Soldes'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card pane-specification-id='18' param='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]' type='color' />
+            <card pane-specification-id='19' param='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (PieCharts2.csv1) (group)]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (group) 1]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[io:Category (PieCharts2.csv1) Set:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[io:Category Set:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts2.csv1):nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762 1:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1D21A362-69F5-4C85-B204-AA0DC531FEC1}' />
+    </window>
+    <window class='worksheet' name='Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card pane-specification-id='18' param='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]' type='color' />
+            <card pane-specification-id='19' param='[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (PieCharts2.csv1) (group)]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[Category (group) 1]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[io:Category (PieCharts2.csv1) Set:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[io:Category Set:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts1.csv):nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category (PieCharts2.csv1):nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[none:Category:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762 1:nk]</field>
+            <field>[federated.16ptjkv06weh6l1dhdr170jzw2a4].[usr:Calculation_188306805438709762:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4763C860-A05B-44D4-B249-2254111EF759}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Revenue' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Soldes' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

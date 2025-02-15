@@ -1,0 +1,1385 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='orders_over_time' inline='true' name='federated.1krmsce0xu4mm91a87erq1q2bilt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='orders_over_time' name='textscan.03g0a9c0iawyiq1e206s00em2mdl'>
+            <connection class='textscan' directory='C:/Users/Esprimo/Bootcamp/Chapter_1_Eniac_and_Magist/Tableau' filename='orders_over_time.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='orders_over_time_tech' name='textscan.1ug4s9203x534b1aud3hz0mqxnjk'>
+            <connection class='textscan' directory='C:/Users/Esprimo/Bootcamp/Chapter_1_Eniac_and_Magist/Tableau' filename='orders_over_time_tech.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='income_over_time' name='textscan.1dwd2k9009sxdi1g05f0l09j6prh'>
+            <connection class='textscan' directory='C:/Users/Esprimo/Bootcamp/Chapter_1_Eniac_and_Magist/Tableau' filename='income_over_time.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.03g0a9c0iawyiq1e206s00em2mdl' name='orders_over_time.csv' table='[orders_over_time#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE'>
+              <column datatype='integer' date-parse-format='yyyy' name='y' ordinal='0' />
+              <column datatype='integer' date-parse-format='MM' name='m' ordinal='1' />
+              <column datatype='integer' name='OrdersPerMonth' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1dwd2k9009sxdi1g05f0l09j6prh' name='income_over_time.csv' table='[income_over_time#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+              <column datatype='integer' name='y' ordinal='0' />
+              <column datatype='integer' name='m' ordinal='1' />
+              <column datatype='integer' name='OrdersPerMonth' ordinal='2' />
+              <column datatype='real' name='IncomePerMonth' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1ug4s9203x534b1aud3hz0mqxnjk' name='orders_over_time_tech.csv' table='[orders_over_time_tech#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE'>
+              <column datatype='integer' name='y' ordinal='0' />
+              <column datatype='integer' name='m' ordinal='1' />
+              <column datatype='integer' name='TechOrdersPerMonth' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1dwd2k9009sxdi1g05f0l09j6prh' name='income_over_time_tech.csv' table='[income_over_time_tech#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+              <column datatype='integer' name='y' ordinal='0' />
+              <column datatype='integer' name='m' ordinal='1' />
+              <column datatype='integer' name='TechOrdersPerMonth' ordinal='2' />
+              <column datatype='real' name='TechIncomePerMonth' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1ug4s9203x534b1aud3hz0mqxnjk' name='orders_over_time_tech300.csv' table='[orders_over_time_tech300#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE'>
+              <column datatype='integer' name='y' ordinal='0' />
+              <column datatype='integer' name='m' ordinal='1' />
+              <column datatype='integer' name='HighEndTechOrdersPerMonth' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1dwd2k9009sxdi1g05f0l09j6prh' name='income_over_time_tech300.csv' table='[income_over_time_tech300#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+              <column datatype='integer' name='y' ordinal='0' />
+              <column datatype='integer' name='m' ordinal='1' />
+              <column datatype='integer' name='HighEndTechOrdersPerMonth' ordinal='2' />
+              <column datatype='real' name='HighEndTechIncomePerMonth' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[HighEndTechIncomePerMonth]' value='[income_over_time_tech300.csv].[HighEndTechIncomePerMonth]' />
+          <map key='[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]' value='[income_over_time_tech300.csv].[HighEndTechOrdersPerMonth]' />
+          <map key='[HighEndTechOrdersPerMonth]' value='[orders_over_time_tech300.csv].[HighEndTechOrdersPerMonth]' />
+          <map key='[IncomePerMonth]' value='[income_over_time.csv].[IncomePerMonth]' />
+          <map key='[OrdersPerMonth (income_over_time.csv)]' value='[income_over_time.csv].[OrdersPerMonth]' />
+          <map key='[OrdersPerMonth]' value='[orders_over_time.csv].[OrdersPerMonth]' />
+          <map key='[TechIncomePerMonth]' value='[income_over_time_tech.csv].[TechIncomePerMonth]' />
+          <map key='[TechOrdersPerMonth (income_over_time_tech.csv)]' value='[income_over_time_tech.csv].[TechOrdersPerMonth]' />
+          <map key='[TechOrdersPerMonth]' value='[orders_over_time_tech.csv].[TechOrdersPerMonth]' />
+          <map key='[m (income_over_time.csv)]' value='[income_over_time.csv].[m]' />
+          <map key='[m (income_over_time_tech.csv)]' value='[income_over_time_tech.csv].[m]' />
+          <map key='[m (income_over_time_tech300.csv)]' value='[income_over_time_tech300.csv].[m]' />
+          <map key='[m (orders_over_time_tech.csv)]' value='[orders_over_time_tech.csv].[m]' />
+          <map key='[m (orders_over_time_tech300.csv)]' value='[orders_over_time_tech300.csv].[m]' />
+          <map key='[m]' value='[orders_over_time.csv].[m]' />
+          <map key='[y (income_over_time.csv)]' value='[income_over_time.csv].[y]' />
+          <map key='[y (income_over_time_tech.csv)]' value='[income_over_time_tech.csv].[y]' />
+          <map key='[y (income_over_time_tech300.csv)]' value='[income_over_time_tech300.csv].[y]' />
+          <map key='[y (orders_over_time_tech.csv)]' value='[orders_over_time_tech.csv].[y]' />
+          <map key='[y (orders_over_time_tech300.csv)]' value='[orders_over_time_tech300.csv].[y]' />
+          <map key='[y]' value='[orders_over_time.csv].[y]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[orders_over_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[income_over_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[orders_over_time_tech.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[income_over_time_tech.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[orders_over_time_tech300.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[income_over_time_tech300.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[y]</local-name>
+            <parent-name>[orders_over_time.csv]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[m]</local-name>
+            <parent-name>[orders_over_time.csv]</parent-name>
+            <remote-alias>m</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OrdersPerMonth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OrdersPerMonth]</local-name>
+            <parent-name>[orders_over_time.csv]</parent-name>
+            <remote-alias>OrdersPerMonth</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[y (income_over_time.csv)]</local-name>
+            <parent-name>[income_over_time.csv]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[m (income_over_time.csv)]</local-name>
+            <parent-name>[income_over_time.csv]</parent-name>
+            <remote-alias>m</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OrdersPerMonth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OrdersPerMonth (income_over_time.csv)]</local-name>
+            <parent-name>[income_over_time.csv]</parent-name>
+            <remote-alias>OrdersPerMonth</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IncomePerMonth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[IncomePerMonth]</local-name>
+            <parent-name>[income_over_time.csv]</parent-name>
+            <remote-alias>IncomePerMonth</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[y (orders_over_time_tech.csv)]</local-name>
+            <parent-name>[orders_over_time_tech.csv]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[m (orders_over_time_tech.csv)]</local-name>
+            <parent-name>[orders_over_time_tech.csv]</parent-name>
+            <remote-alias>m</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TechOrdersPerMonth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TechOrdersPerMonth]</local-name>
+            <parent-name>[orders_over_time_tech.csv]</parent-name>
+            <remote-alias>TechOrdersPerMonth</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[y (income_over_time_tech.csv)]</local-name>
+            <parent-name>[income_over_time_tech.csv]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[m (income_over_time_tech.csv)]</local-name>
+            <parent-name>[income_over_time_tech.csv]</parent-name>
+            <remote-alias>m</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TechOrdersPerMonth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TechOrdersPerMonth (income_over_time_tech.csv)]</local-name>
+            <parent-name>[income_over_time_tech.csv]</parent-name>
+            <remote-alias>TechOrdersPerMonth</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TechIncomePerMonth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TechIncomePerMonth]</local-name>
+            <parent-name>[income_over_time_tech.csv]</parent-name>
+            <remote-alias>TechIncomePerMonth</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[y (orders_over_time_tech300.csv)]</local-name>
+            <parent-name>[orders_over_time_tech300.csv]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[m (orders_over_time_tech300.csv)]</local-name>
+            <parent-name>[orders_over_time_tech300.csv]</parent-name>
+            <remote-alias>m</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HighEndTechOrdersPerMonth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HighEndTechOrdersPerMonth]</local-name>
+            <parent-name>[orders_over_time_tech300.csv]</parent-name>
+            <remote-alias>HighEndTechOrdersPerMonth</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[y (income_over_time_tech300.csv)]</local-name>
+            <parent-name>[income_over_time_tech300.csv]</parent-name>
+            <remote-alias>y</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[m (income_over_time_tech300.csv)]</local-name>
+            <parent-name>[income_over_time_tech300.csv]</parent-name>
+            <remote-alias>m</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HighEndTechOrdersPerMonth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]</local-name>
+            <parent-name>[income_over_time_tech300.csv]</parent-name>
+            <remote-alias>HighEndTechOrdersPerMonth</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HighEndTechIncomePerMonth</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[HighEndTechIncomePerMonth]</local-name>
+            <parent-name>[income_over_time_tech300.csv]</parent-name>
+            <remote-alias>HighEndTechIncomePerMonth</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:HighEndTechOrdersPerMonth:qk]&quot;' value='High-End Tech Sales (300 € per unit upward)' />
+          <alias key='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:OrdersPerMonth:qk]&quot;' value='General Sales' />
+          <alias key='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:TechOrdersPerMonth:qk]&quot;' value='Tech Sales' />
+        </aliases>
+      </column>
+      <column caption='yearMonth' datatype='date' name='[Calculation_867505924503810049]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='MAKEDATE([y],[m],1)' />
+      </column>
+      <column caption='Trendline 2018 All Products' datatype='integer' name='[Calculation_955044642741600256]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF (MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049])) &gt; 12*2017+11 THEN&#13;&#10;    -8378*(MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049]))+203844021&#13;&#10;ELSE&#13;&#10;    NULL&#13;&#10;END' />
+      </column>
+      <column caption='High End Tech Income Per Month' datatype='real' name='[HighEndTechIncomePerMonth]' role='dimension' type='quantitative' />
+      <column caption='HighEndTechOrdersPerMonth (income over time tech300.csv)' datatype='integer' name='[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]' role='dimension' type='quantitative' />
+      <column caption='High End Tech Orders Per Month' datatype='integer' name='[HighEndTechOrdersPerMonth]' role='dimension' type='quantitative' />
+      <column caption='Income Per Month' datatype='real' name='[IncomePerMonth]' role='dimension' type='ordinal' />
+      <column caption='OrdersPerMonth (income over time.csv)' datatype='integer' name='[OrdersPerMonth (income_over_time.csv)]' role='dimension' type='quantitative' />
+      <column caption='Orders Per Month' datatype='integer' name='[OrdersPerMonth]' role='dimension' type='quantitative' />
+      <column caption='Tech Income Per Month' datatype='real' name='[TechIncomePerMonth]' role='dimension' type='ordinal' />
+      <column caption='TechOrdersPerMonth (income over time tech.csv)' datatype='integer' name='[TechOrdersPerMonth (income_over_time_tech.csv)]' role='dimension' type='quantitative' />
+      <column caption='Tech Orders Per Month' datatype='integer' name='[TechOrdersPerMonth]' role='dimension' type='quantitative' />
+      <column caption='Trendline 2018 Tech Products' datatype='integer' name='[Trendline 2018 All Products (copy)_955044642752950273]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF (MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049])) &gt; 12*2017+11 THEN&#13;&#10;    -7822*(MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049]))+189575021&#13;&#10;ELSE&#13;&#10;    NULL&#13;&#10;END' />
+      </column>
+      <column caption='income_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]' role='measure' type='quantitative' />
+      <column caption='income_over_time_tech.csv' datatype='table' name='[__tableau_internal_object_id__].[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]' role='measure' type='quantitative' />
+      <column caption='income_over_time_tech300.csv' datatype='table' name='[__tableau_internal_object_id__].[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]' role='measure' type='quantitative' />
+      <column caption='orders_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]' role='measure' type='quantitative' />
+      <column caption='orders_over_time_tech.csv' datatype='table' name='[__tableau_internal_object_id__].[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]' role='measure' type='quantitative' />
+      <column caption='orders_over_time_tech300.csv' datatype='table' name='[__tableau_internal_object_id__].[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]' role='measure' type='quantitative' />
+      <column caption='M (Income Over Time.Csv)' datatype='integer' name='[m (income_over_time.csv)]' role='measure' type='quantitative' />
+      <column caption='M (Income Over Time Tech.Csv)' datatype='integer' name='[m (income_over_time_tech.csv)]' role='measure' type='quantitative' />
+      <column caption='M (Income Over Time Tech300.Csv)' datatype='integer' name='[m (income_over_time_tech300.csv)]' role='measure' type='quantitative' />
+      <column caption='M (Orders Over Time Tech.Csv)' datatype='integer' name='[m (orders_over_time_tech.csv)]' role='measure' type='quantitative' />
+      <column caption='M (Orders Over Time Tech300.Csv)' datatype='integer' name='[m (orders_over_time_tech300.csv)]' role='measure' type='quantitative' />
+      <column caption='M' datatype='integer' name='[m]' role='dimension' type='quantitative' />
+      <column caption='Y (Income Over Time.Csv)' datatype='integer' name='[y (income_over_time.csv)]' role='measure' type='quantitative' />
+      <column caption='Y (Income Over Time Tech.Csv)' datatype='integer' name='[y (income_over_time_tech.csv)]' role='measure' type='quantitative' />
+      <column caption='Y (Income Over Time Tech300.Csv)' datatype='integer' name='[y (income_over_time_tech300.csv)]' role='measure' type='quantitative' />
+      <column caption='Y (Orders Over Time Tech.Csv)' datatype='integer' name='[y (orders_over_time_tech.csv)]' role='measure' type='quantitative' />
+      <column caption='Y (Orders Over Time Tech300.Csv)' datatype='integer' name='[y (orders_over_time_tech300.csv)]' role='measure' type='quantitative' />
+      <column caption='Y' datatype='integer' name='[y]' role='dimension' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:orders_over_time.csv_C432BB0A731F4446A87187445F1C3554:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_955044642741600256]' derivation='Attribute' name='[attr:Calculation_955044642741600256:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]' derivation='Attribute' name='[attr:HighEndTechOrdersPerMonth (income_over_time_tech300.csv):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[HighEndTechOrdersPerMonth]' derivation='Attribute' name='[attr:HighEndTechOrdersPerMonth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[IncomePerMonth]' derivation='Attribute' name='[attr:IncomePerMonth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[OrdersPerMonth]' derivation='Attribute' name='[attr:OrdersPerMonth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TechIncomePerMonth]' derivation='Attribute' name='[attr:TechIncomePerMonth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TechOrdersPerMonth]' derivation='Attribute' name='[attr:TechOrdersPerMonth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_955044642741600256]' derivation='Avg' name='[avg:Calculation_955044642741600256:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_955044642741600256]' derivation='Count' name='[cnt:Calculation_955044642741600256:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_955044642741600256]' derivation='Median' name='[med:Calculation_955044642741600256:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TechOrdersPerMonth]' derivation='None' name='[none:TechOrdersPerMonth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_955044642741600256]' derivation='Sum' name='[sum:Calculation_955044642741600256:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[OrdersPerMonth]' derivation='Sum' name='[sum:OrdersPerMonth:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Trendline 2018 All Products (copy)_955044642752950273]' derivation='Sum' name='[sum:Trendline 2018 All Products (copy)_955044642752950273:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Esprimo/AppData/Local/Temp/TableauTemp/#TableauTemp_1a1u4s909q79wd16d175w0hjfgk4.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/13/2025 07:46:57 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='orders_over_time.csv_C432BB0A731F4446A87187445F1C3554' table='[Extract].[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]' type='table' />
+            <relation name='income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7' table='[Extract].[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]' type='table' />
+            <relation name='orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168' table='[Extract].[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]' type='table' />
+            <relation name='income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C' table='[Extract].[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]' type='table' />
+            <relation name='orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348' table='[Extract].[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]' type='table' />
+            <relation name='income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA' table='[Extract].[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]' type='table' />
+          </relation>
+          <cols>
+            <map key='[HighEndTechIncomePerMonth]' value='[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA].[HighEndTechIncomePerMonth]' />
+            <map key='[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]' value='[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA].[HighEndTechOrdersPerMonth]' />
+            <map key='[HighEndTechOrdersPerMonth]' value='[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348].[HighEndTechOrdersPerMonth]' />
+            <map key='[IncomePerMonth]' value='[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7].[IncomePerMonth]' />
+            <map key='[OrdersPerMonth (income_over_time.csv)]' value='[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7].[OrdersPerMonth]' />
+            <map key='[OrdersPerMonth]' value='[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554].[OrdersPerMonth]' />
+            <map key='[TechIncomePerMonth]' value='[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C].[TechIncomePerMonth]' />
+            <map key='[TechOrdersPerMonth (income_over_time_tech.csv)]' value='[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C].[TechOrdersPerMonth]' />
+            <map key='[TechOrdersPerMonth]' value='[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168].[TechOrdersPerMonth]' />
+            <map key='[m (income_over_time.csv)]' value='[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7].[m]' />
+            <map key='[m (income_over_time_tech.csv)]' value='[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C].[m]' />
+            <map key='[m (income_over_time_tech300.csv)]' value='[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA].[m]' />
+            <map key='[m (orders_over_time_tech.csv)]' value='[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168].[m]' />
+            <map key='[m (orders_over_time_tech300.csv)]' value='[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348].[m]' />
+            <map key='[m]' value='[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554].[m]' />
+            <map key='[y (income_over_time.csv)]' value='[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7].[y]' />
+            <map key='[y (income_over_time_tech.csv)]' value='[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C].[y]' />
+            <map key='[y (income_over_time_tech300.csv)]' value='[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA].[y]' />
+            <map key='[y (orders_over_time_tech.csv)]' value='[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168].[y]' />
+            <map key='[y (orders_over_time_tech300.csv)]' value='[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348].[y]' />
+            <map key='[y]' value='[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554].[y]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>y</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[y]</local-name>
+              <parent-name>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</parent-name>
+              <remote-alias>y</remote-alias>
+              <ordinal>0</ordinal>
+              <family>orders_over_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>m</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[m]</local-name>
+              <parent-name>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</parent-name>
+              <remote-alias>m</remote-alias>
+              <ordinal>1</ordinal>
+              <family>orders_over_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OrdersPerMonth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OrdersPerMonth]</local-name>
+              <parent-name>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</parent-name>
+              <remote-alias>OrdersPerMonth</remote-alias>
+              <ordinal>2</ordinal>
+              <family>orders_over_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>y</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[y (income_over_time.csv)]</local-name>
+              <parent-name>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</parent-name>
+              <remote-alias>y</remote-alias>
+              <ordinal>3</ordinal>
+              <family>income_over_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>m</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[m (income_over_time.csv)]</local-name>
+              <parent-name>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</parent-name>
+              <remote-alias>m</remote-alias>
+              <ordinal>4</ordinal>
+              <family>income_over_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OrdersPerMonth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OrdersPerMonth (income_over_time.csv)]</local-name>
+              <parent-name>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</parent-name>
+              <remote-alias>OrdersPerMonth</remote-alias>
+              <ordinal>5</ordinal>
+              <family>income_over_time.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IncomePerMonth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[IncomePerMonth]</local-name>
+              <parent-name>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</parent-name>
+              <remote-alias>IncomePerMonth</remote-alias>
+              <ordinal>6</ordinal>
+              <family>income_over_time.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>y</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[y (orders_over_time_tech.csv)]</local-name>
+              <parent-name>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</parent-name>
+              <remote-alias>y</remote-alias>
+              <ordinal>7</ordinal>
+              <family>orders_over_time_tech.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>m</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[m (orders_over_time_tech.csv)]</local-name>
+              <parent-name>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</parent-name>
+              <remote-alias>m</remote-alias>
+              <ordinal>8</ordinal>
+              <family>orders_over_time_tech.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TechOrdersPerMonth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TechOrdersPerMonth]</local-name>
+              <parent-name>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</parent-name>
+              <remote-alias>TechOrdersPerMonth</remote-alias>
+              <ordinal>9</ordinal>
+              <family>orders_over_time_tech.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>y</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[y (income_over_time_tech.csv)]</local-name>
+              <parent-name>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</parent-name>
+              <remote-alias>y</remote-alias>
+              <ordinal>10</ordinal>
+              <family>income_over_time_tech.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>m</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[m (income_over_time_tech.csv)]</local-name>
+              <parent-name>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</parent-name>
+              <remote-alias>m</remote-alias>
+              <ordinal>11</ordinal>
+              <family>income_over_time_tech.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TechOrdersPerMonth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TechOrdersPerMonth (income_over_time_tech.csv)]</local-name>
+              <parent-name>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</parent-name>
+              <remote-alias>TechOrdersPerMonth</remote-alias>
+              <ordinal>12</ordinal>
+              <family>income_over_time_tech.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TechIncomePerMonth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[TechIncomePerMonth]</local-name>
+              <parent-name>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</parent-name>
+              <remote-alias>TechIncomePerMonth</remote-alias>
+              <ordinal>13</ordinal>
+              <family>income_over_time_tech.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>y</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[y (orders_over_time_tech300.csv)]</local-name>
+              <parent-name>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</parent-name>
+              <remote-alias>y</remote-alias>
+              <ordinal>14</ordinal>
+              <family>orders_over_time_tech300.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>m</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[m (orders_over_time_tech300.csv)]</local-name>
+              <parent-name>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</parent-name>
+              <remote-alias>m</remote-alias>
+              <ordinal>15</ordinal>
+              <family>orders_over_time_tech300.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HighEndTechOrdersPerMonth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[HighEndTechOrdersPerMonth]</local-name>
+              <parent-name>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</parent-name>
+              <remote-alias>HighEndTechOrdersPerMonth</remote-alias>
+              <ordinal>16</ordinal>
+              <family>orders_over_time_tech300.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>y</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[y (income_over_time_tech300.csv)]</local-name>
+              <parent-name>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</parent-name>
+              <remote-alias>y</remote-alias>
+              <ordinal>17</ordinal>
+              <family>income_over_time_tech300.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>m</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[m (income_over_time_tech300.csv)]</local-name>
+              <parent-name>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</parent-name>
+              <remote-alias>m</remote-alias>
+              <ordinal>18</ordinal>
+              <family>income_over_time_tech300.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HighEndTechOrdersPerMonth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]</local-name>
+              <parent-name>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</parent-name>
+              <remote-alias>HighEndTechOrdersPerMonth</remote-alias>
+              <ordinal>19</ordinal>
+              <family>income_over_time_tech300.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HighEndTechIncomePerMonth</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[HighEndTechIncomePerMonth]</local-name>
+              <parent-name>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</parent-name>
+              <remote-alias>HighEndTechIncomePerMonth</remote-alias>
+              <ordinal>20</ordinal>
+              <family>income_over_time_tech300.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>22</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[sum:Trendline 2018 All Products (copy)_955044642752950273:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:Calculation_955044642741600256:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[avg:Calculation_955044642741600256:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[cnt:Calculation_955044642741600256:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[med:Calculation_955044642741600256:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[sum:Calculation_955044642741600256:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[sum:OrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:IncomePerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:OrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:TechIncomePerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[cnt:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[diff:attr:TechOrdersPerMonth:qk:2]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[diff:attr:TechOrdersPerMonth:qk:3]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[diff:attr:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[pcrk:attr:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[rank:attr:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[sum:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[win:attr:TechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[__tableau_internal_object_id__].[cnt:orders_over_time.csv_C432BB0A731F4446A87187445F1C3554:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:HighEndTechOrdersPerMonth (income_over_time_tech300.csv):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:HighEndTechOrdersPerMonth:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='income_over_time.csv' id='income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7'>
+            <properties context=''>
+              <relation connection='textscan.1dwd2k9009sxdi1g05f0l09j6prh' name='income_over_time.csv' table='[income_over_time#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+                  <column datatype='integer' name='y' ordinal='0' />
+                  <column datatype='integer' name='m' ordinal='1' />
+                  <column datatype='integer' name='OrdersPerMonth' ordinal='2' />
+                  <column datatype='real' name='IncomePerMonth' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7' table='[Extract].[income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7]' type='table' />
+            </properties>
+          </object>
+          <object caption='income_over_time_tech.csv' id='income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C'>
+            <properties context=''>
+              <relation connection='textscan.1dwd2k9009sxdi1g05f0l09j6prh' name='income_over_time_tech.csv' table='[income_over_time_tech#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+                  <column datatype='integer' name='y' ordinal='0' />
+                  <column datatype='integer' name='m' ordinal='1' />
+                  <column datatype='integer' name='TechOrdersPerMonth' ordinal='2' />
+                  <column datatype='real' name='TechIncomePerMonth' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C' table='[Extract].[income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C]' type='table' />
+            </properties>
+          </object>
+          <object caption='income_over_time_tech300.csv' id='income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA'>
+            <properties context=''>
+              <relation connection='textscan.1dwd2k9009sxdi1g05f0l09j6prh' name='income_over_time_tech300.csv' table='[income_over_time_tech300#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+                  <column datatype='integer' name='y' ordinal='0' />
+                  <column datatype='integer' name='m' ordinal='1' />
+                  <column datatype='integer' name='HighEndTechOrdersPerMonth' ordinal='2' />
+                  <column datatype='real' name='HighEndTechIncomePerMonth' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA' table='[Extract].[income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA]' type='table' />
+            </properties>
+          </object>
+          <object caption='orders_over_time.csv' id='orders_over_time.csv_C432BB0A731F4446A87187445F1C3554'>
+            <properties context=''>
+              <relation connection='textscan.03g0a9c0iawyiq1e206s00em2mdl' name='orders_over_time.csv' table='[orders_over_time#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE'>
+                  <column datatype='integer' date-parse-format='yyyy' name='y' ordinal='0' />
+                  <column datatype='integer' date-parse-format='MM' name='m' ordinal='1' />
+                  <column datatype='integer' name='OrdersPerMonth' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='orders_over_time.csv_C432BB0A731F4446A87187445F1C3554' table='[Extract].[orders_over_time.csv_C432BB0A731F4446A87187445F1C3554]' type='table' />
+            </properties>
+          </object>
+          <object caption='orders_over_time_tech.csv' id='orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168'>
+            <properties context=''>
+              <relation connection='textscan.1ug4s9203x534b1aud3hz0mqxnjk' name='orders_over_time_tech.csv' table='[orders_over_time_tech#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE'>
+                  <column datatype='integer' name='y' ordinal='0' />
+                  <column datatype='integer' name='m' ordinal='1' />
+                  <column datatype='integer' name='TechOrdersPerMonth' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168' table='[Extract].[orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168]' type='table' />
+            </properties>
+          </object>
+          <object caption='orders_over_time_tech300.csv' id='orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348'>
+            <properties context=''>
+              <relation connection='textscan.1ug4s9203x534b1aud3hz0mqxnjk' name='orders_over_time_tech300.csv' table='[orders_over_time_tech300#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE'>
+                  <column datatype='integer' name='y' ordinal='0' />
+                  <column datatype='integer' name='m' ordinal='1' />
+                  <column datatype='integer' name='HighEndTechOrdersPerMonth' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348' table='[Extract].[orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[y]' />
+                <expression op='[y (income_over_time.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[m]' />
+                <expression op='[m (income_over_time.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='orders_over_time.csv_C432BB0A731F4446A87187445F1C3554' />
+            <second-end-point object-id='income_over_time.csv_9E7A95539A6241A7A4108D556FB8F0B7' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[y (orders_over_time_tech.csv)]' />
+                <expression op='[y (income_over_time_tech.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[m (orders_over_time_tech.csv)]' />
+                <expression op='[m (income_over_time_tech.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168' />
+            <second-end-point object-id='income_over_time_tech.csv_88350566254D4B6DA205FB1F3793887C' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[y (orders_over_time_tech300.csv)]' />
+                <expression op='[y (income_over_time_tech300.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[m (orders_over_time_tech300.csv)]' />
+                <expression op='[m (income_over_time_tech300.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348' />
+            <second-end-point object-id='income_over_time_tech300.csv_DB8D4797FF8A4D919E5CB709EAD40AFA' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[y]' />
+                <expression op='[y (orders_over_time_tech.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[m]' />
+                <expression op='[m (orders_over_time_tech.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='orders_over_time.csv_C432BB0A731F4446A87187445F1C3554' />
+            <second-end-point object-id='orders_over_time_tech.csv_55BD6DBDB71A483181F2EA2F343FE168' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[y]' />
+                <expression op='[y (orders_over_time_tech300.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[m]' />
+                <expression op='[m (orders_over_time_tech300.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='orders_over_time.csv_C432BB0A731F4446A87187445F1C3554' />
+            <second-end-point object-id='orders_over_time_tech300.csv_BFF89379148D4D5B8E72B70D81772348' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sales'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='orders_over_time' name='federated.1krmsce0xu4mm91a87erq1q2bilt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1krmsce0xu4mm91a87erq1q2bilt'>
+            <column caption='yearMonth' datatype='date' name='[Calculation_867505924503810049]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE([y],[m],1)' />
+            </column>
+            <column caption='Trendline 2018 All Products' datatype='integer' name='[Calculation_955044642741600256]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF (MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049])) &gt; 12*2017+11 THEN&#13;&#10;    -8378*(MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049]))+203844021&#13;&#10;ELSE&#13;&#10;    NULL&#13;&#10;END' />
+            </column>
+            <column caption='HighEndTechOrdersPerMonth (income over time tech300.csv)' datatype='integer' name='[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]' role='dimension' type='quantitative' />
+            <column caption='High End Tech Orders Per Month' datatype='integer' name='[HighEndTechOrdersPerMonth]' role='dimension' type='quantitative' />
+            <column caption='Income Per Month' datatype='real' name='[IncomePerMonth]' role='dimension' type='ordinal' />
+            <column caption='Orders Per Month' datatype='integer' name='[OrdersPerMonth]' role='dimension' type='quantitative' />
+            <column caption='Tech Income Per Month' datatype='real' name='[TechIncomePerMonth]' role='dimension' type='ordinal' />
+            <column caption='Tech Orders Per Month' datatype='integer' name='[TechOrdersPerMonth]' role='dimension' type='quantitative' />
+            <column caption='Trendline 2018 Tech Products' datatype='integer' name='[Trendline 2018 All Products (copy)_955044642752950273]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF (MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049])) &gt; 12*2017+11 THEN&#13;&#10;    -7822*(MONTH([Calculation_867505924503810049])+12*YEAR([Calculation_867505924503810049]))+189575021&#13;&#10;ELSE&#13;&#10;    NULL&#13;&#10;END' />
+            </column>
+            <column-instance column='[HighEndTechOrdersPerMonth (income_over_time_tech300.csv)]' derivation='Attribute' name='[attr:HighEndTechOrdersPerMonth (income_over_time_tech300.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[HighEndTechOrdersPerMonth]' derivation='Attribute' name='[attr:HighEndTechOrdersPerMonth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[IncomePerMonth]' derivation='Attribute' name='[attr:IncomePerMonth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[OrdersPerMonth]' derivation='Attribute' name='[attr:OrdersPerMonth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TechIncomePerMonth]' derivation='Attribute' name='[attr:TechIncomePerMonth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[TechOrdersPerMonth]' derivation='Attribute' name='[attr:TechOrdersPerMonth:qk]' pivot='key' type='quantitative' />
+            <column caption='M' datatype='integer' name='[m]' role='dimension' type='quantitative' />
+            <column-instance column='[IncomePerMonth]' derivation='None' name='[none:IncomePerMonth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_955044642741600256]' derivation='Sum' name='[sum:Calculation_955044642741600256:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Trendline 2018 All Products (copy)_955044642752950273]' derivation='Sum' name='[sum:Trendline 2018 All Products (copy)_955044642752950273:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_867505924503810049]' derivation='Month-Trunc' name='[tmn:Calculation_867505924503810049:qk]' pivot='key' type='quantitative' />
+            <column caption='Y' datatype='integer' name='[y]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1krmsce0xu4mm91a87erq1q2bilt].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:IncomePerMonth:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:TechIncomePerMonth:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:HighEndTechOrdersPerMonth (income_over_time_tech300.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[sum:Calculation_955044642741600256:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[sum:Trendline 2018 All Products (copy)_955044642752950273:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1krmsce0xu4mm91a87erq1q2bilt].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:OrdersPerMonth:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:TechOrdersPerMonth:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[attr:HighEndTechOrdersPerMonth:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:IncomePerMonth:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1krmsce0xu4mm91a87erq1q2bilt].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1krmsce0xu4mm91a87erq1q2bilt].[tmn:Calculation_867505924503810049:qk]' field-type='quantitative' major-origin='#2017-01-01 00:00:00#' major-spacing='6.0' major-units='months' max='#2018-08-01 00:00:00#' min='#2016-07-23 00:00:00#' minor-origin='#2017-07-27 12:00:00#' minor-show='false' minor-spacing='1.0' minor-units='months' range-type='fixed' scope='cols' type='space' />
+            <format attr='auto-subtitle' class='0' field='[federated.1krmsce0xu4mm91a87erq1q2bilt].[tmn:Calculation_867505924503810049:qk]' scope='cols' value='true' />
+            <format attr='title' class='0' field='[federated.1krmsce0xu4mm91a87erq1q2bilt].[tmn:Calculation_867505924503810049:qk]' scope='cols' value='' />
+            <format attr='title' class='0' field='[federated.1krmsce0xu4mm91a87erq1q2bilt].[Multiple Values]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' value='true' />
+            <format attr='break-on-special' value='true' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='dashed' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1krmsce0xu4mm91a87erq1q2bilt].[:Measure Names]' value=''>
+              <formatted-text />
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1krmsce0xu4mm91a87erq1q2bilt].[:Measure Names]' />
+              <lod column='[federated.1krmsce0xu4mm91a87erq1q2bilt].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1krmsce0xu4mm91a87erq1q2bilt].[Multiple Values]</rows>
+        <cols>[federated.1krmsce0xu4mm91a87erq1q2bilt].[tmn:Calculation_867505924503810049:qk]</cols>
+      </table>
+      <simple-id uuid='{AFE740E3-3BC3-4025-9D49-BDE47ED6ACCC}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sales'>
+      <cards>
+        <edge name='left'>
+          <strip size='298'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card pane-specification-id='9' param='[federated.1krmsce0xu4mm91a87erq1q2bilt].[:Measure Names]' show-title='false' type='color' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[mn:Calculation_867505924503810049:ok]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:HighEndTechOrdersPerMonth (income_over_time_tech300.csv):qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:HighEndTechOrdersPerMonth:qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:IncomePerMonth:ok]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:OrdersPerMonth:qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:TechIncomePerMonth:ok]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:TechOrdersPerMonth:qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:m:qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[none:y:qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[tyr:m:qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[tyr:y:qk]</field>
+            <field>[federated.1krmsce0xu4mm91a87erq1q2bilt].[yr:Calculation_867505924503810049:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{49F2E210-A3C1-4C4A-8068-2B1F2BFE6D0C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sales' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
